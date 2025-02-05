@@ -1,0 +1,121 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Hanken Grotesk", Arial, sans-serif;
+  background-color: #262626;
+  color: #D9D9D9;
+  padding: 20px;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+main{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+header {
+  text-align: center;
+}
+
+header > h1 {
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: #F9F4DA;
+}
+
+header > p {
+  font-size: 0.875rem;
+  max-width: 350px;
+  color: #8E8E8E;
+}
+
+section.game-status {
+  width: 350px;
+  background-color: #10A95B;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #F9F4DA;
+  border-radius: 4px;
+  margin-block: 30px;
+}
+
+section.game-status > p {
+  margin: 5px;
+}
+section.game-status > h2 {
+  font-size: 1.25rem;
+  margin: 5px
+}
+
+section.language-chips{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  max-width: 350px;
+  justify-content: center;
+}
+
+span.chip {
+  border-radius: 3px;
+  padding: 4.5px;
+}
+
+section.current-word{
+  max-width: 350px;
+  padding: 40px;
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+
+}
+
+span.currentWordChar{
+  font-size: 1.75rem;
+  background-color: #323232;
+  width: 40px;
+  height: 40px;
+  display: block;
+  border-bottom: 2px solid #F9F4DA;
+  text-align: center;
+  color: #F9F4DA;
+}
+
+section.keyboard{
+  max-width: 480px;
+  padding: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  justify-content: center;
+}
+
+span.key{
+  font-size: 1rem;
+  font-weight: 600;
+  background-color: #FCBA29;
+  width: 37px;
+  height: 37px;
+  border: 1px solid #D7D7D7;
+  border-radius: 4px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  color: #1e1e1e;
+}
+
+span.incorrectKey{
+  background-color: #EC5D49;
+}
+
+span.correctKey{
+  background-color: #10A95B;
+}
