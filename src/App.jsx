@@ -64,6 +64,7 @@ function App() {
       <section className='keyboard'>
         {keyElements}
       </section>
+      <button className='reset'>New Game</button>
     </main>
   )
 }
