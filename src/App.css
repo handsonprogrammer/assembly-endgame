@@ -79,13 +79,14 @@ section.current-word{
 }
 
 span.currentWordChar{
-  font-size: 1.75rem;
+  font-size: 1.5rem;
   background-color: #323232;
   width: 40px;
   height: 40px;
-  display: block;
+  display: flex;
   border-bottom: 2px solid #F9F4DA;
-  text-align: center;
+  justify-content: center;
+  align-items: center;
   color: #F9F4DA;
 }
 
@@ -98,18 +99,16 @@ section.keyboard{
   justify-content: center;
 }
 
-span.key{
+button.key{
   font-size: 1rem;
-  font-weight: 600;
+  font-weight: 500;
   background-color: #FCBA29;
   width: 37px;
   height: 37px;
   border: 1px solid #D7D7D7;
   border-radius: 4px;
-  align-items: center;
-  justify-content: center;
-  display: flex;
   color: #1e1e1e;
+  cursor: pointer;
 }
 
 span.incorrectKey{

@@ -9,7 +9,7 @@ function App() {
   const[currentWord, setCurrentWord] = useState("react")
 
   const currentWordChars = [...currentWord].map((char,index)=>{
-    return <span key={index} className="currentWordChar">{char}</span>
+    return <span key={index} className="currentWordChar">{char.toUpperCase()}</span>
   })
 
   const languageElements= languages.map((lang)=>{
@@ -38,7 +38,7 @@ function App() {
 
   const keyElements = [...keys].map((key)=>{
     return(
-      <span key={key.id} className="key incorrectKey">{key.text.toUpperCase()}</span>
+      <button key={key.id} className="key">{key.text.toUpperCase()}</button>
     )
   })
 
