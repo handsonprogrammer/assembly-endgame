@@ -38,13 +38,26 @@ header > p {
 
 section.game-status {
   width: 350px;
-  background-color: #10A95B;
   display: flex;
   flex-direction: column;
   align-items: center;
   color: #F9F4DA;
   border-radius: 4px;
   margin-block: 30px;
+  min-height: 65px;
+}
+
+section.game-status.languageLost{
+  justify-content: center;
+  background-color: #7A5EA7;
+}
+
+section.game-status.won{
+  background-color: #10A95B;
+}
+
+section.game-status.lost{
+  background-color: #EC5D49;
 }
 
 section.game-status > p {
@@ -66,7 +79,24 @@ section.language-chips{
 span.chip {
   border-radius: 3px;
   padding: 4.5px;
+  position: relative;
 }
+
+/* Dimmed overlay with skull on "lost" languages */
+span.chip.lost::before {
+  content: "💀";
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  font-size: 0.85rem;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
 
 section.current-word{
   max-width: 350px;
@@ -78,7 +108,7 @@ section.current-word{
 
 }
 
-span.currentWordChar{
+section.current-word > span{
   font-size: 1.5rem;
   background-color: #323232;
   width: 40px;
@@ -90,6 +120,10 @@ span.currentWordChar{
   color: #F9F4DA;
 }
 
+section.current-word > span.missed{
+  color:#EC5D49
+}
+
 section.keyboard{
   max-width: 480px;
   padding: 5px;
@@ -99,7 +133,7 @@ section.keyboard{
   justify-content: center;
 }
 
-button.key{
+section.keyboard > button{
   font-size: 1rem;
   font-weight: 500;
   background-color: #FCBA29;
@@ -111,12 +145,17 @@ button.key{
   cursor: pointer;
 }
 
-span.incorrectKey{
+section.keyboard > button.wrong{
   background-color: #EC5D49;
 }
 
-span.correctKey{
+section.keyboard > button.correct{
   background-color: #10A95B;
+}
+
+section.keyboard > button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5
 }
 
 button.reset{
